@@ -19,8 +19,8 @@
 
     <by.sergey.customview.EmotionalFace
         android:id="@+id/happyEmotionalFace"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
         android:layout_margin="50dp"
         app:borderWidth="10dp"
         app:faceColor="#4CAF50"
@@ -30,13 +30,24 @@
 
     <by.sergey.customview.EmotionalFace
         android:id="@+id/sadEmotionalFace"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
         android:layout_margin="50dp"
         app:borderWidth="10dp"
         app:faceColor="#F44336"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:state="sad" />
+    <by.sergey.customview.EmotionalFace
+        android:id="@+id/neutralEmotionalFace"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_margin="50dp"
+        app:borderWidth="10dp"
+        app:faceColor="#FFAB40"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:state="neutral" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

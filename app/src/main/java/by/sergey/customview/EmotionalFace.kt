@@ -18,6 +18,7 @@ class EmotionalFace(context: Context, attrs: AttributeSet) : View(context, attrs
 
         const val HAPPY = 0L
         const val SAD = 1L
+        const val NEUTRAL = 2L
     }
 
     private var faceColor = DEFAULT_FACE_COLOR
@@ -108,13 +109,20 @@ class EmotionalFace(context: Context, attrs: AttributeSet) : View(context, attrs
         if (happinessState == HAPPY) {
             mouthPath.quadTo(size * 0.50f, size * 0.80f, size * 0.78f, size * 0.70f)
             mouthPath.quadTo(size * 0.50f, size * 0.90f, size * 0.22f, size * 0.70f)
-        } else {
+            paint.style = Paint.Style.FILL
+        } else if(happinessState == SAD) {
             mouthPath.quadTo(size * 0.5f, size * 0.50f, size * 0.78f, size * 0.7f)
             mouthPath.quadTo(size * 0.5f, size * 0.60f, size * 0.22f, size * 0.7f)
+            paint.style = Paint.Style.FILL
+        }
+        else{
+            mouthPath.lineTo(size * 0.75f, size * 0.7f)
+            paint.style = Paint.Style.STROKE
+            paint.strokeWidth = 6f
         }
 
         paint.color = mouthColor
-        paint.style = Paint.Style.FILL
+
 
         canvas.drawPath(mouthPath, paint)
 

@@ -7,6 +7,7 @@
         <attr name="borderColor" format="color" />
         <attr name="borderWidth" format="dimension" />
         <attr name="state" format="enum">
+            <enum name="neutral" value="2" />
             <enum name="happy" value="0" />
             <enum name="sad" value="1" />
         </attr>

@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity() {
         val sadEmotionalFace = findViewById<EmotionalFace>(R.id.sadEmotionalFace)
         val happyEmotionalFace = findViewById<EmotionalFace>(R.id.happyEmotionalFace)
         val userEmotionalFace = findViewById<EmotionalFace>(R.id.userEmotionalFace)
+        val neutralEmotionalFace = findViewById<EmotionalFace>(R.id.neutralEmotionalFace)
 
         happyEmotionalFace.setOnClickListener {
             userEmotionalFace.happinessState = EmotionalFace.HAPPY
@@ -20,6 +21,8 @@ class MainActivity : AppCompatActivity() {
         sadEmotionalFace.setOnClickListener {
             userEmotionalFace.happinessState = EmotionalFace.SAD
         }
-
+         neutralEmotionalFace.setOnClickListener{
+             userEmotionalFace.happinessState = EmotionalFace.NEUTRAL
+         }
     }
 }
